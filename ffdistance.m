@@ -1,4 +1,4 @@
-function [Dplus,Dminus]=ffdistance(R,Splus,Sminus)
+function [Dplus,Dminus]=ffdistance(R,w,Splus,Sminus)
 
 [m,n]=size(R);
 Dplus=zeros(m,1);

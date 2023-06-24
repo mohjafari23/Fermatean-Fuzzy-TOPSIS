@@ -1,4 +1,4 @@
-function [rank,RC]= FFTOPSIS1(w,CS,R,rc)
+function [rank,RC]= FFTOPSIS(w,CS,R,rc)
 %m is number of alternatives
 %n is number of criteria
 %w is criteria weights
@@ -7,7 +7,7 @@ function [rank,RC]= FFTOPSIS1(w,CS,R,rc)
 %rc=true for relative closeness, rc=fulse for revised closeness by Vench and Mirjaberi (2014)
 
 score=ffscore(R); %calculating score of decission cell
-
+[m,n]=size(R);
 Splus=R(score==CS.*max(score.*repmat(CS,[m,1])))'; %FFPIS
 Sminus=R(score==CS.*min(score.*repmat(CS,[m,1])))';%FFNIS
 

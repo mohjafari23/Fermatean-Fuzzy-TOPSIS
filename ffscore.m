@@ -1,10 +1,10 @@
-function score=ffscore(R,m,n)
+function score=ffscore(R)
 %ffscore is fermatean fuzzy score function
 % r is decission cell
 % score is the fermatean fuzzy score
 %m is number of alternatives
 %n is number of criteria
-
+[m,n]=size(R);
 score=zeros(m,n); %empty score matrix
     for i=1:m
         for j=1:n
